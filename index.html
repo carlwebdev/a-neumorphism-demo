@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neumorphism UI Trend Demo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar neo-surface">
+        <div class="brand">
+          <span class="brand-dot" aria-hidden="true"></span>
+          <h1>Neumorphism</h1>
+        </div>
+
+        <button
+          class="icon-btn neo-button nav-toggle"
+          id="navToggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+          aria-controls="topNav"
+        >
+          ☰
+        </button>
+
+        <nav class="top-nav" id="topNav" aria-label="Primary navigation">
+          <a href="#overview">Overview</a>
+          <a href="#demo">Demo</a>
+          <a href="#components">Components</a>
+          <a href="#faqs">FAQs</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <button class="icon-btn neo-button" id="themeToggle" aria-label="Toggle theme">
+            <span id="themeIcon">☀️</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="hero" id="overview">
+        <div class="hero-copy">
+          <p class="kicker">UI Trend Demo</p>
+          <h2>Soft depth, subtle shadows, tactile controls.</h2>
+          <p>
+            A one-page playground showing core neumorphic patterns: raised cards,
+            inset fields, tactile buttons, and smooth state transitions.
+          </p>
+          <div class="hero-actions">
+            <button class="neo-button primary">Get Started</button>
+            <button class="neo-button ghost">Preview</button>
+            <button class="neo-button" id="openDialogBtn" type="button">Open Dialog</button>
+          </div>
+        </div>
+
+        <div class="hero-stats neo-surface">
+          <h3>Dashboard Snapshot</h3>
+          <div class="stats-grid">
+            <article class="stat neo-surface">
+              <span class="label">Sessions</span>
+              <strong>24.8K</strong>
+            </article>
+            <article class="stat neo-surface">
+              <span class="label">Retention</span>
+              <strong>93.2%</strong>
+            </article>
+            <article class="stat neo-surface">
+              <span class="label">Conversion</span>
+              <strong>7.9%</strong>
+            </article>
+            <article class="stat neo-surface">
+              <span class="label">Satisfaction</span>
+              <strong>4.8/5</strong>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="demo-grid" id="demo">
+        <article class="music-card neo-surface">
+          <h3>Now Playing</h3>
+          <p class="muted">Lofi Focus Mix</p>
+          <div class="album neo-inset" aria-hidden="true">
+            <div class="album-inner"></div>
+          </div>
+          <input id="progress" type="range" min="0" max="100" value="35" aria-label="Track progress" />
+          <div class="player-actions">
+            <button class="icon-btn neo-button">⏮</button>
+            <button class="icon-btn neo-button primary">⏯</button>
+            <button class="icon-btn neo-button">⏭</button>
+          </div>
+        </article>
+
+        <article class="control-card neo-surface">
+          <h3>Control Center</h3>
+          <div class="control-row">
+            <label for="volume">Volume</label>
+            <span id="volumeValue">68%</span>
+          </div>
+          <input id="volume" type="range" min="0" max="100" value="68" aria-label="Volume" />
+
+          <div class="control-row">
+            <label for="email">Email</label>
+          </div>
+          <input id="email" class="neo-input" type="email" placeholder="hello@product.dev" />
+
+          <div class="toggle-row">
+            <span>Enable Smart Mode</span>
+            <button id="smartToggle" class="switch neo-inset" type="button" role="switch" aria-checked="true">
+              <span class="switch-thumb"></span>
+            </button>
+          </div>
+
+          <button class="neo-button primary full">Save Preferences</button>
+        </article>
+      </section>
+
+      <section class="component-showcase" id="components">
+        <article class="component-card neo-surface">
+          <h3>Generic Components</h3>
+          <p class="muted">Simple building blocks used across modern UI demos.</p>
+
+          <div class="chip-row">
+            <span class="chip neo-surface">Tag</span>
+            <span class="chip neo-surface">Badge</span>
+            <span class="chip neo-surface">Status</span>
+            <span class="chip neo-surface">Pill</span>
+          </div>
+
+          <div class="progress-card neo-inset">
+            <div class="control-row">
+              <span>Project Completion</span>
+              <strong>72%</strong>
+            </div>
+            <input id="completion" type="range" min="0" max="100" value="72" aria-label="Project completion" />
+          </div>
+        </article>
+
+        <article class="faq-card neo-surface" id="faqs">
+          <h3>FAQs</h3>
+          <details class="faq-item neo-surface" open>
+            <summary>What is neumorphism?</summary>
+            <p>It is a soft, depth-based style that combines subtle highlights and shadows to mimic raised and inset surfaces.</p>
+          </details>
+          <details class="faq-item neo-surface">
+            <summary>Where does it work best?</summary>
+            <p>It shines in dashboards, toggles, cards, and controls where tactile cues improve visual hierarchy.</p>
+          </details>
+          <details class="faq-item neo-surface">
+            <summary>How do I keep it accessible?</summary>
+            <p>Use strong contrast, visible focus states, and clear labels so the interface remains readable and operable.</p>
+          </details>
+        </article>
+      </section>
+
+      <footer class="page-footer neo-surface">
+        <p>Neumorphism One-Page Demo</p>
+        <nav aria-label="Footer navigation">
+          <a href="#">Overview</a>
+          <a href="#">Components</a>
+          <a href="#">FAQs</a>
+        </nav>
+      </footer>
+    </main>
+
+    <dialog id="trendDialog" class="neo-dialog">
+      <form method="dialog" class="dialog-content neo-surface">
+        <h3>Dialog Component</h3>
+        <p>This native dialog is styled to match the neumorphism trend and works as a simple modal pattern.</p>
+        <div class="dialog-actions">
+          <button value="cancel" class="neo-button ghost">Close</button>
+          <button value="confirm" class="neo-button primary">Continue</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
