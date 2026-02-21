@@ -273,18 +273,35 @@ body {
   padding: 12px 14px;
 
   & summary {
+    position: relative;
     cursor: pointer;
     font-weight: 600;
     list-style: none;
+    padding-right: 22px;
 
     &::-webkit-details-marker {
       display: none;
+    }
+
+    &::after {
+      content: '▾';
+      position: absolute;
+      right: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      transition: transform var(--transition), color var(--transition);
     }
   }
 
   & p {
     margin: 10px 0 0;
     color: var(--muted);
+  }
+
+  &[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+    color: var(--text);
   }
 }
 
